@@ -1,0 +1,58 @@
+ when i hit npm start, here's the error message:
+ 
+ npm error windows_nt 6.2.9200
+ 
+ to solve it, i tried:
+ $ npm install --global --production windows-build-tools
+ 
+ not working
+ 
+ abandoned this project, started a new one CALLED hello
+ 
+not working
+
+error message: something wrong with path in webpack.config.js
+
+(solution in https://github.com/webpack/webpack/issues/4530#issuecomment-289446592)
+
+const path = require('path');
+path: path.resolve(__dirname, './dist'),
+
+put the first line at the beginning, and the second line to replace to old path: ...
+
+path correct ,still not working
+
+error: loader . changed loader from 'babel' to 'babel-loader'
+
+successful
+
+
+comment below crashed the app, need to figure out why: 
+class App extends React.Component {
+   render() {
+      return (
+         <div>
+            <h1>Header</h1>
+            {//End of the line Comment...}
+            {/*Multi line comment...*/}
+         </div>
+      );
+   }
+}
+
+
+need to figure out the following: 
+
+https://www.tutorialspoint.com/reactjs/reactjs_components.htm
+
+Notice that we are using key = {i} inside map() function. This will help React to update only necessary elements instead of re-rendering entire list when something change. It is huge performance boost for larger number of dynamically created elements.
+
+
+example for default props doesn't work, need to figure out why:
+https://www.tutorialspoint.com/reactjs/reactjs_props_overview.htm
+
+
+
+
+
+
